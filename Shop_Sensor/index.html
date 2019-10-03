@@ -2,18 +2,60 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
-<link href="../BOOT_N/css/bootstrap.css" type="text/css" rel="stylesheet">
-<link href="../BOOT_N/css/bootstrap-theme.css" type="text/css" rel="stylesheet">
+<title>ДАТЧИКИ</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="Datch.css">
 
 </head>
 
 <body>
-<section style="background:#CCC;">
-	<div class="col col col  co "></div>
-</section>
+<div class="container pt-3" id="Contner">
+    <div class="row">
+        <div class="col">
+            <h1>ДАТЧИКИ газа</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+           <div class="form_group">
+                <label for="search">найти датчик</label>
+                <input type="text" class="form-control" placeholder="тип датчика" id="search">
+           </div> 
+           <hr>
+           <ul class="list-group">
+               <li
+                    v-for="dat of datch"
+                    class="list-group-item list-group-item-action pointer"
+               >
+               {{dat.name}} - {{dat.GAS}}
+            </li>
+             
 
-<script src="file:../BOOT_N/js/bootstrap.js"></script> 
-<script src="file:../BOOT_N/js/npm.js"></script> 
+           </ul>
+        </div>
+        <div class="col-md-8 pt-3">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2>"ВАРТА 1-03.14"</h2>
+                    <img src="../../Images/DA-14.jpg" class="rounded size-datch ">
+                </div>
+                <div class="col-md-7">
+                    <h4>Параметры</h4>
+                    <ul>
+                        <li><strong>Тип</strong></li>
+                        <li><strong>Тип газа</strong></li>
+                        <li><strong>Потребляемая мощность</strong></li>
+                    </ul>
+                    <p>*044-555-55-55</p>
+                    <button class="btn btn-outline-success">Показать телефон</button>
+                    <button class="btn btn-primary ml-4">Выбрать</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="Datch.js"></script>
 </body>
 </html>
