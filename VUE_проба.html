@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Документ без названия</title>
+<link href="../../Vue_proba.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+	<h1 v-bind:title="mess">{{message}}</h1>
+</div>
+
+<div id="pp">
+<input type="text" v-on:input="ss" />
+<h1 v-text="message"></h1>
+<!--<span @click="title='ПРОВЕРКА'">КНОПКА</span>-->
+<span @mouseover="message='ПРОВЕРКА'">КНОПКА</span>
+    <!--<span @mouseover="changeText">КНОПКА</span>-->  
+
+</div>Fкно
+<div id="demo">
+	<button v-on:click="show=!show" class="btn">Toggle</button>
+	<transition name="fade">
+		<p v-if="show">
+			dcdsfcasdlsdgkfpgk  rwetlerw[tkl 
+			rtgfrkejmtowperjtgirt owerfgnewr oerfgiewr oewirtfgewrt  
+		</p>
+	</transition>
+</div>
+<div id="tt">
+	<p class="txt1">gsdfgdfsg</p>
+</div>
+<div id="aa">
+	<span v-class="red : isRed">{{out}}</span><br />
+   <span v-style ='css.string'>123456789</span>
+</div>
+<script>
+var appp = new Vue ({ 
+		el:"#app",
+		data : {
+				message:"fgpsdfjopijgoisjg",
+				mess:"ПРОВЕРКА"
+			}
+})
+//************************
+	new Vue ({		
+			el: "#pp",
+			data: {
+				message:"Привет1132"
+			},
+			methods : {
+				ss: function(event) {
+					this.message=event.target.value
+				}
+			}
+	})	
+	//****************************************		
+	var yy=new Vue ({	
+			el:'#demo',
+			data:{
+				show:false
+				}			
+	})
+	var uu=new Vue ({
+		el :  "#aa",
+		data: {
+			out:"Просто тексlт",
+         isRed: true,
+			css : {
+				string: "background:#456;"
+			}
+		}
+		});
+//	https://www.youtube.com/watch?v=HWUYZHVSgwo
+</script>
+
+</body>
+</html>
+
+			
+			
