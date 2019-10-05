@@ -17,12 +17,14 @@ new Vue({
     data : {
         datch: datchiki,
         out2 : "0000000000",
-        dat1 : datchiki[0]
+        dat1 : datchiki[0],
+        selectedDatIndex:0
     },
     methods: {
         selectDat: function(index){
             console.log("CLICK", index);
-            this.dat1=datchiki[index]
+            this.dat1=datchiki[index],
+            this.selectedDatIndex=index
         }
     }    
 })
