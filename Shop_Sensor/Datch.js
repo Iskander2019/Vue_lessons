@@ -18,7 +18,8 @@ new Vue({
         datch: datchiki,
         out2 : "0000000000",
         dat1 : datchiki[0],
-        selectedDatIndex:0
+        selectedDatIndex:0,
+        phoneVisibility:false
     },
     methods: {
         selectDat: function(index){
